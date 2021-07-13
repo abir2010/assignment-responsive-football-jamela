@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 /*--------------------------------------*\
-.............styles on HEARDER...........
+.............styles on HEADER...........
 \*---------------------------------------*/
 .header-part{
     display: flex;
@@ -71,3 +71,85 @@ body{
 /*--------------------------------------*\
 ..............styles on FOOTER.............
 \*---------------------------------------*/
+.container{
+    text-align: center;
+    margin-top: 69.5px;
+}
+.footer-img img{
+    margin-top: 158px;
+    height: 110px;
+    width: 483.87px;
+}
+.icons a{
+    height: 32px;
+    width: 32px;
+    color: #969BAB;
+    margin-right: 5px;
+    padding: 8px 8px 6px 8px;
+    border-radius: 45px;
+    background-color: rgb(230, 227, 227);
+}
+.icons a:hover{
+    height: 32px;
+    width: 32px;
+    color: #ffffff;
+    margin-right: 5px;
+    padding: 8px 8px 6px 8px;
+    border-radius: 45px;
+    background-color: rgb(53, 66, 136);
+}
+.footer-para{
+    font-size: 18px;
+}
+/*--------------------------------------*\
+....MEDIA QUERY for mobile....
+\*---------------------------------------*/
+@media only screen and (max-width: 688px) {
+    body{
+        margin: 0;
+    }
+    /* Header */
+    .header-part{
+        display: block;
+        height: 695px;
+        width: 400px;
+        padding-left: 26px;
+        padding-top: 112px;
+        background-color: #2D25A0;
+    }
+    .banner-img{
+        margin-top: 100px;
+        height: 259.17px;
+        width: 329px;
+    }
+    .heading1{
+        font-size:  40px;
+        color: #FFFFFF;
+        height: 138px;
+        width: 278px;
+        margin-bottom: 10px;
+    }
+    /* main */
+    .profiles{
+        height: 6000px;
+        margin: 69.5px 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+    /* Footer */
+    .container{
+        padding-left: 5px;
+        text-align: center;
+        margin-top: 69.5px;
+        margin-bottom: 187px;
+    }
+    .footer-img img{
+        margin-top: 158px;
+        height: 110px;
+        width: 236px;
+    }
+  }
