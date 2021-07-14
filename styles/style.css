@@ -4,6 +4,7 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
+    padding: 0;
 }
 /*--------------------------------------*\
 .............styles on HEADER...........
@@ -11,7 +12,6 @@ body{
 .header-part{
     display: flex;
     height: 677px;
-    padding-left: 100px;
     background-color: #2D25A0;
     justify-content: space-evenly;
     align-items: center;
@@ -33,6 +33,14 @@ body{
     height: 44px;
     width: 168px;
 }
+.button1:hover{
+    transform: rotate(360deg) scale(1.2);
+    transition: transform 500ms ease-in-out;
+}
+.header-img img:hover{
+    transform: scale(1.2);
+    transition: transform 500ms ease-in-out;
+}
 .banner-img{
     height: 438px;
     width: 556.01px;
@@ -41,15 +49,15 @@ body{
 ..................styles on MAIN.................
 \*---------------------------------------*/
 .profiles{
-    margin: 69.5px 157px;
+    padding: 69.5px 157px;
     height: 1977px;
-    width: 1050px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
     align-items: center;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
+    
 }
 .profile{
     height: 474px;
@@ -67,6 +75,62 @@ body{
 .profile p{
     font-size: 22px;
     color: #6C6C6C;
+}
+/*--------------------------------------*\
+....styles on bonus-02 section.....
+\*---------------------------------------*/
+.news{
+    display: flex;
+}
+.news-image img{
+    height: 178px;
+    width: 255px;
+}
+.news-info{
+    height: 178px;
+    width: 255px;
+    padding-left: 15px;
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.5);
+}
+span{
+    font-size: x-small;
+}
+.top-news{
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    justify-items: center;
+}
+/*--------------------------------------*\
+.........styles on bonus-01 part......
+\*---------------------------------------*/
+.upcoming-match{
+    background-image: url(images\players/player-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.match h1{
+    font-size: 40px;
+}
+.match a{
+    text-decoration: none;
+    font-size: 20px;
+    border: 7px solid #E02C6D;
+    border-radius: 15px;
+}
+.match{
+    text-align: center;
+}
+.button2{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #E02C6D;
+    justify-content: center;
+    align-items: center;
 }
 /*--------------------------------------*\
 ..............styles on FOOTER.............
@@ -111,14 +175,65 @@ body{
     /* Header */
     .header-part{
         display: block;
-        height: 695px;
-        width: 400px;
-        padding-left: 26px;
-        padding-top: 112px;
+        height: 595px;
+        padding-top: 80px;
         background-color: #2D25A0;
     }
     .banner-img{
-        margin-top: 100px;
+        margin-top: 60px;
+        height: 259.17px;
+        width: 90%;
+    }
+    .header-head, .header-img{
+        padding-left: 5%;
+    }
+    .heading1{
+        font-size:  40px;
+        color: #FFFFFF;
+        height: 138px;
+        width: 278px;
+        margin-bottom: 10px;
+    }
+    /* main */
+    .profiles{
+        height: 6000px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 30px;
+    }
+    /* Footer */
+    .container{
+        padding-left: 5px;
+        text-align: center;
+        margin-top: 69.5px;
+        margin-bottom: 187px;
+    }
+    .footer-img img{
+        margin-top: 158px;
+        margin-bottom: 30px;
+        height: 70px;
+        width: 250px;
+    }
+}
+/*-------------------------------------------*\
+.......MEDIA QUERY for tablets.......
+\*--------------------------------------------*/
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    body{
+        margin: 0;
+    }
+    /* Header */
+    .header-part{
+        display: flex;
+        height: 495px;
+        width: 100%;
+        padding-top: 80px;
+        background-color: #2D25A0;
+    }
+    .banner-img{
+        margin-top: 50px;
         height: 259.17px;
         width: 329px;
     }
@@ -131,25 +246,11 @@ body{
     }
     /* main */
     .profiles{
-        height: 6000px;
-        margin: 69.5px 40px;
+        height: 3000px;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
-        grid-column-gap: 30px;
         grid-row-gap: 30px;
     }
-    /* Footer */
-    .container{
-        padding-left: 5px;
-        text-align: center;
-        margin-top: 69.5px;
-        margin-bottom: 187px;
-    }
-    .footer-img img{
-        margin-top: 158px;
-        height: 110px;
-        width: 236px;
-    }
-  }
+}
